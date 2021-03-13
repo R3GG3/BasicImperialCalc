@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    user-select: none;
+}
+
+h1,h2{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+h1{
+    font-size: 68px;
+}
+h2{
+    font-size: 60px;
+}
+#top{
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, red, black, green);
+}
+
+#bottom{
+    height: 100vh;
+    background-color: rgb(32, 32, 32);
+}
+
+form{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30vh;
+
+    text-align: center;
+    color: white;
+    border: 2px solid green;
+    width: 350px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#top input{
+    font-family: 'Ranchers', cursive;
+
+    margin-left: 43%;
+    margin-top: 280px;
+
+    padding: 10px;
+    width: 300px;
+
+    border: 2px solid green;
+    border-radius: 18px;
+
+    text-align: center;    
+    font-size: 50px;
+
+    background-color: transparent;
+    color: white;
+
+    transition: all 300ms ease-in-out;
+    outline: none;
+}
+
+#top input:hover{
+    background-color: green;
+    transform: scale(1.2);
+}
+
+button{
+    font-family: 'Ranchers', cursive;
+    
+    margin-top: 20px;
+    margin-left: 10px;
+
+    outline: none;
+}
+
+.switch{
+    width: 30px;
+}
+
+.inputs{
+    margin-top: 20px;
+}

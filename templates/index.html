@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block head %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    function hideEU(){
+        $("#EU").fadeOut( 500, function() {});
+        $("#US").delay(500).fadeIn( 500, function() {});
+    }
+
+    function hideUS(){
+        $("#US").fadeOut( 500, function() {});
+        $("#EU").delay(500).fadeIn( 500, function() {});
+    }
+</script>
+{% endblock %}
+
+{% block content %}
+<main id="top">
+    <div>&nbsp;</div>
+    <h1>Welcome to Basic USA - EU CALCULATOR</h1>
+    <h2>Yes, we know that's not only usa measurement etc. :)</h2>
+    <input type="button" onclick="document.getElementById('bottom').scrollIntoView()" value="LET'S GO"/>
+</main>
+<main id="bottom">
+    <div>&nbsp;</div>
+    <form method="post" id="EU">
+        <h3>From EU To US</h3>
+        <p class="inputs">Kilometers: <input type="number" value="0" name="kilometer"/></p>
+        <p class="inputs">Meters: <input type="number" value="0"  name="meter"/></p>
+        <p class="inputs">Celsius: <input type="number" value="0"  name="celsius"/></p>
+        <br/>
+        <button>SUBMIT</button>
+        <input type="button" class="switch" onclick="hideEU()" value="&#x267B;"/>
+        </method>
+    </form>
+    <form method="post" id="US" style="display: none;">
+        <h3>From US To EU</h3>
+        <p class="inputs">Miles: <input type="number" value="0" name="mile"/></p>
+        <p class="inputs">Foots: <input type="number" value="0"  name="foot"/></p>
+        <p class="inputs">Fahrenheit: <input type="text" value="0"  name="fahrenheit"/></p>
+        <br/>
+        <button>SUBMIT</button>
+        <input type="button" class="switch" onclick="hideUS()"" value="&#x267B;"/>
+    </form>
+</main>
+{% endblock %}
