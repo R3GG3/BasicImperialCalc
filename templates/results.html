@@ -1,5 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
-{{old}}
-{{variables}}
+<!--STEP 7-->
+<main id="bottom">
+<div>&nbsp;</div>
+<h2>Results</h2>
+{% if variables["kilometer"] %}
+    <ul class="results">
+        <li>{{old[0]}} mil - {{variables["kilometer"]}} km</li>
+        <li>{{old[1]}} ft - {{variables["meter"]}} m</li>
+        <li>{{old[2]}} fahrenheit - {{variables["celsius"]}} celsius</li>
+    </ul>
+{% endif %}
+{% if variables["mile"] %}
+    <ul class="results">
+        <li>{{old[0]}} km - {{variables["mile"]}} mil</li>
+        <li>{{old[1]}} m - {{variables["foot"]}} ft</li>
+        <li>{{old[2]}} celsius - {{variables["fahrenheit"]}} fahrenheit</li>
+    </ul>
+{% endif %}
+{% if not variables["kilometer"] and not variables["mile"] %}
+    <h4 style="color: white;">Error, did you leave all inputs at 0?</h4>
+{% endif %}
+<input type="button" id="return_btn" value="RETURN" onclick="window.location.href='{{ url_for( 'home') }}'"/>
+</main>
 {% endblock %}

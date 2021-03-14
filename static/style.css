@@ -12,6 +12,7 @@ html{
 
 body{
     user-select: none;
+    overflow: hidden;
 }
 
 h1,h2{
@@ -26,10 +27,7 @@ h1{
 h2{
     font-size: 60px;
 }
-#top{
-    height: 100vh;
-    background-image: linear-gradient(to bottom right, red, black, green);
-}
+
 
 #bottom{
     height: 100vh;
@@ -47,6 +45,26 @@ form{
     width: 350px;
     padding: 20px;
     border-radius: 10px;
+}
+
+#top{
+    height: 100vh;
+    background: linear-gradient(80deg, #ff0000, #000000, #585858, #008b0c);
+	background-size: 400% 400%;
+	animation: gradient 30s ease infinite;
+
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 #top input{
@@ -91,4 +109,53 @@ button{
 
 .inputs{
     margin-top: 20px;
+}
+
+.results{
+    user-select: text;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+
+    text-align: center;
+    color: white;
+    border: 2px solid green;
+    width: 350px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.results li{
+    list-style-type: none;
+}
+
+#return_btn{
+    font-family: 'Ranchers', cursive; 
+
+    margin-left: 43%;
+    margin-top: 280px;
+
+    padding: 10px;
+    width: 300px;
+
+    border: 2px solid green;
+    border-radius: 18px;
+
+    text-align: center;    
+    font-size: 50px;
+
+    background-color: transparent;
+    color: white;
+
+    transition: all 300ms ease-in-out;
+    outline: none;
+}
+
+#return_btn:hover{
+    background-color: green;
+    transform: scale(1.2);
+}
+
+a{
+    text-decoration: none;
 }
