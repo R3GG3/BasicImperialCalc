@@ -59,7 +59,7 @@ form{
     background: linear-gradient(80deg, #ff0000, #000000, #585858, #008b0c);
 	background-size: 400% 400%;
 	
-    animation: gradient 30s ease infinite;
+    animation: gradient 30s linear infinite;
 }
 
 @keyframes gradient {
@@ -69,9 +69,9 @@ form{
 	50% {
 		background-position: 100% 50%;
 	}
-	100% {
-		background-position: 0% 50%;
-	}
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 #top input{
