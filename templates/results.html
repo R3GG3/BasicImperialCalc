@@ -21,6 +21,8 @@
 {% if not variables["kilometer"] and not variables["mile"] %}
     <h4 style="color: white;">Error, did you leave all inputs at 0?</h4>
 {% endif %}
-<input type="button" id="return_btn" value="RETURN" onclick="window.location.href='{{ url_for( 'home') }}'"/>
+<div id="button-space">
+    <input type="button" id="return_btn" value="RETURN" onclick="window.location.href='{{ url_for( 'home') }}'"/>
+</div>
 </main>
 {% endblock %}
