@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
 
+/*
+    --desktop: 1600px;
+    --laptop: 1440px;
+    --tablet: 768px;
+    --phone: 425px;
+*/
 html{
     scroll-behavior: smooth;
 }
@@ -7,7 +13,6 @@ html{
 *{
     margin: 0;
     padding: 0;
-    
 }
 
 body{
@@ -28,7 +33,6 @@ h2{
     font-size: 60px;
 }
 
-
 #bottom{
     height: 100vh;
     background-color: rgb(32, 32, 32);
@@ -41,18 +45,21 @@ form{
 
     text-align: center;
     color: white;
-    border: 2px solid green;
+    
     width: 350px;
     padding: 20px;
+
+    border: 2px solid green;
     border-radius: 10px;
 }
 
 #top{
     height: 100vh;
+
     background: linear-gradient(80deg, #ff0000, #000000, #585858, #008b0c);
 	background-size: 400% 400%;
-	animation: gradient 30s ease infinite;
-
+	
+    animation: gradient 30s ease infinite;
 }
 
 @keyframes gradient {
@@ -70,11 +77,8 @@ form{
 #top input{
     font-family: 'Ranchers', cursive;
 
-    margin-left: 43%;
-    margin-top: 280px;
-
     padding: 10px;
-    width: 300px;
+    width: 320px;
 
     border: 2px solid green;
     border-radius: 18px;
@@ -92,6 +96,15 @@ form{
 #top input:hover{
     background-color: green;
     transform: scale(1.2);
+}
+
+#button-space{
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    text-align: center;
+    width: 100%;
 }
 
 button{
@@ -113,15 +126,18 @@ button{
 
 .results{
     user-select: text;
+
     margin-left: auto;
     margin-right: auto;
     margin-top: 10vh;
 
     text-align: center;
     color: white;
-    border: 2px solid green;
+
     width: 350px;
     padding: 20px;
+
+    border: 2px solid green;
     border-radius: 10px;
 }
 
@@ -132,11 +148,8 @@ button{
 #return_btn{
     font-family: 'Ranchers', cursive; 
 
-    margin-left: 43%;
-    margin-top: 280px;
-
     padding: 10px;
-    width: 300px;
+    width: 320px;
 
     border: 2px solid green;
     border-radius: 18px;
@@ -158,4 +171,24 @@ button{
 
 a{
     text-decoration: none;
+}
+
+@media screen and (max-width: 1440px){
+    h1{
+        font-size: 50px;
+    }
+
+    h2{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 780px){
+    h1{
+        font-size: 30px;
+    }
+
+    h2{
+        font-size: 20px;
+    }
 }
