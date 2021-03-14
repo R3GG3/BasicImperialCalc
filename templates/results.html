@@ -9,13 +9,15 @@
         <li>{{old[0]}} mil - {{variables["kilometer"]}} km</li>
         <li>{{old[1]}} ft - {{variables["meter"]}} m</li>
         <li>{{old[2]}} fahrenheit - {{variables["celsius"]}} celsius</li>
+        <li>{{old[3]}} lb - {{variables["kilogram"]}} kg</li>
     </ul>
 {% endif %}
 {% if variables["mile"] %}
     <ul class="results">
         <li>{{old[0]}} km - {{variables["mile"]}} mil</li>
-        <li>{{old[1]}} m - {{variables["foot"]}} ft</li>
+        <li>{{old[1]}} m - {{variables["feet"]}} ft</li>
         <li>{{old[2]}} celsius - {{variables["fahrenheit"]}} fahrenheit</li>
+        <li>{{old[3]}} kg - {{variables["funt"]}} lb</li>
     </ul>
 {% endif %}
 {% if not variables["kilometer"] and not variables["mile"] %}
